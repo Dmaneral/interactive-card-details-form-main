@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="second-part">
-      <form>
+      <form id="form">
         <div class="name-wrapper">
           <label for="name-inp">cardholder name</label>
           <input type="text" id="name-inp" placeholder="e.g. Jane Appleseed">
@@ -46,8 +46,12 @@
           <div class="card-date-wrapper">
             <label for="card-date">EXP.DATE (MM/YY)</label>
             <div class="card-date">
-              <input type="number" placeholder="MM" id="month" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"  minlength="2" maxlength="2" min="1" max="12" pattern="[0-9]{2}" required>
-              <input type="number" placeholder="YY" id="year" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" minLength="2" maxLength="2" min="23" max="30" pattern="[0-9]{2}">
+              <div class="month-wrapper">
+                <input type="number" placeholder="MM" id="month" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"  minlength="2" maxlength="2" min="1" max="12" pattern="[0-9]{2}">
+              </div>
+              <div class="year-wrapper">
+                <input type="number" placeholder="YY" id="year" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" minLength="2" maxLength="2" min="23" max="30" pattern="[0-9]{2}">
+              </div>
             </div>
           </div>
           <div class="card-cvc">
@@ -55,8 +59,19 @@
             <input type="number" placeholder="e.g. 123" id="card-cvc" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" minlength="3" maxlength="3">      
           </div>
         </div>
-        <button id="submit">Confirm</button>
+        <button id="submit" class="btn">Confirm</button>
       </form>
+      <div class="thank-cont" id="thank">
+        <img src="./images/icon-complete.svg" alt="complete">
+        <div class="text">
+          <h2>thank you!</h2>
+          <p>
+            We've added your card details
+          </p>
+        </div>
+        
+        <button id="continue" class="btn">Continue</button>
+      </div>
     </div>
   </main>
   <script src="./script.js"></script>
