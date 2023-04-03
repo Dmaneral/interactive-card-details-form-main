@@ -301,6 +301,10 @@ h2 {
         width: 75%;
     }
 
+    .name-date {
+        width: 75%;
+    }
+
     .second-part {
         width: 50%;
         display: flex;
